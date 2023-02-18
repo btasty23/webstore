@@ -1,0 +1,68 @@
+<%= stylesheet_link_tag "test.css" %>
+<h1>
+    Test Page
+</h1>
+
+<p> This is how to pull things from ruby: <%= @name %> </p>
+    
+<ul>
+<% @cats.each do |variable| %>
+<li> <b><%= variable[:name]  %></b>, <%=  variable[:weight] %> </li>
+<% end %>
+</ul>
+<% if @cats.length > 2 %>
+<h2> Wow thats a lot of cats!</h2>
+<%end%>
+
+<table>
+    <tbody>
+        <% @cats.each do |cat| %>
+        <tr>
+            <td><%= cat.name %></td>
+            <td><%= cat.weight %></td>
+            <td><%= cat.color %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+<p class="dir"> 
+    <a href="/team">Team Site</a> &emsp;&emsp;
+    <a href="/blog">Blog Site</a> &emsp;&emsp;
+    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">The Best Site</a>
+</p>
+
+<hr/>
+
+<h2>Add a new Cat</h2>
+
+
+
+<form action='/cats' method='POST'>
+
+<input name='name' type='text' placeholder='name'>
+<input name="weight" type="number" placeholder='weight'>
+<input name="color" type="text" placeholder='color'>
+<input type='submit'>
+
+</form>
+
+
+
+
+
+
+
+<hr/>
+
+
+<form action='/login' method='POST'>
+
+<label>Username: </label>
+<input name='username' type='text' placeholder='username'>
+<label>Password: </label>
+<input name="password" type="password">
+<input type='submit'>
+
+</form>

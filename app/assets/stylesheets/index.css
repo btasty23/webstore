@@ -1,0 +1,29 @@
+body {
+    background-color: powderblue;
+  }
+h1 {
+  color: blue;
+  margin: auto;
+  text-align: center;
+}
+p {
+  color: red;
+  border: 2px solid black;
+  padding: 30px;
+  margin: 50px;
+}
+table,td {
+  margin-block-start: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+p.blog {
+  color: black;
+  padding: 10px;
+  margin: 20px;
+  border: none;
+}
