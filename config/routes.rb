@@ -8,4 +8,11 @@ Rails.application.routes.draw do
   get '/test', to: "home#test"
   post '/login', to: "home#login"
   post '/post', to: "home#post"
+
+  #Sessions routes
+  get '/login', to: 'sessions#login'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+  post '/logout', to: 'sessions#destroy'
+
 end
