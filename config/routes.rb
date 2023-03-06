@@ -9,13 +9,5 @@ Rails.application.routes.draw do
   post '/login', to: "home#login"
   post '/post', to: "home#post"
 
-  #Sessions routes
-  get '/login', to: 'sessions#login'
-  post '/login', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
-  post '/logout', to: 'sessions#destroy'
-
-  resources :users, only [:new, :create, :index, :show]
-  resources: :sessions, only: [:new, :create, :destroy]
-
+  get '/admin', to: "product#home"
 end
