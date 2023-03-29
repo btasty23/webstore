@@ -3,11 +3,20 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  get '/blog', to: "home#blog"
+ 
   get '/team', to: "home#team"
-  get '/test', to: "home#test"
-  post '/login', to: "home#login"
-  post '/post', to: "home#post"
 
-  get '/admin', to: "product#home"
+  
+  get '/test', to: "home#test"
+
+
+  post '/login', to: "home#login"
+
+
+  get '/blog', to: "home#blog"
+  post '/post', to: "home#post"
+  
+  
+  get '/admin', to: "home#admin"
+  post '/newproduct', to: "home#newproduct"
 end

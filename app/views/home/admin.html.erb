@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag "test.css" %>
+<h1>
+    Admin Page
+</h1>
+
+<h3>Here is where all admin requests will take place.</h3>
+    
+
+<p>Here are the items:</p>
+<ul>
+<% @marketplace.each do |market| %>
+<li><%= market[:name]  %></li>
+<% end %>
+</ul>
+
+<hr/>
+
+<h2>Add a new Product</h2>
+
+
+
+<form action='/newproduct' method='POST'>
+
+<input name='image' type='text' placeholder='image.jpg'>
+<input name='name' type='text' placeholder='name'>
+<input name="price" type="text" placeholder='price'>
+<input name="desciption" type="text" placeholder='description'>
+<input name="quantity" type="text" placeholder='quantity'>
+<input type='submit'>
+</form>
+
+
+<hr/>
+
+<p class="dir"> 
+	<a href="/">Home Site</a> &emsp;&emsp;
+    <a href="/team">Team Site</a> &emsp;&emsp;
+    <a href="/blog">Blog Site</a> &emsp;&emsp;
+</p>
+
+
+
+
+
+
+
+
+<hr/>
+
+</form>

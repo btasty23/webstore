@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     skip_before_action :verify_authenticity_token
     def index
-
+        @marketplace = Marketplace.all
     end
     
     def team
@@ -41,5 +41,37 @@ class HomeController < ApplicationController
         end
     end
 
+    def newproduct
+        @marketplace = Marketplace.all
+        
+        newproduct = Marketplace.new
+        newproduct.image = params[:image]
+        newproduct.name = params[:name]
+        newproduct.price = params[:price]
+        newproduct.description = params[:description]
+        newproduct.quantity = params[:quantity]
+
+        newproduct.save
+        redirect_to "/admin"
+    end
+
+    def admin
+        @marketplace = Marketplace.all
+    end
+    
+
+
+    def add_to_cart
+        
+    end
+
+    def view_cart
+
+    end
+
+    def checkout
+
+    end
+    
 
 end
