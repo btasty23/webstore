@@ -41,6 +41,10 @@ class HomeController < ApplicationController
         end
     end
 
+    def admin
+        @marketplace = Marketplace.all
+    end
+
     def newproduct
         @marketplace = Marketplace.all
         

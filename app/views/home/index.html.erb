@@ -1,5 +1,3 @@
-<html>
-
 <head>
     <title>Index</title>
     <%= stylesheet_link_tag "index.css" %>
@@ -20,13 +18,13 @@
             <th>Quantity</th>
         </tr>
         <% @marketplace.each do |market| %>
-        <tr>
-            <td> <%= image_tag market[:image] %> </td>
-            <td> <%= market[:name] %> </td>
-            <td> <%= number_to_currency market[:price] %> </td>
-            <td> <%= market[:description] %> </td>
-            <td> <%= market[:quantity] %> </td>
-        </tr>
+            <tr>
+                <td> <%= image_tag market[:image] %> </td>
+                <td> <%= market[:name] %> </td>
+                <td> <%= number_to_currency market[:price] %> </td>
+                <td> <%= market[:description] %> </td>
+                <td> <%= market[:quantity] %> </td>
+            </tr>
         <%end%>
         </tbody>
     </table>
@@ -38,5 +36,3 @@
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">The Best Site</a>
     </p>
 </body>
-
-</html>
