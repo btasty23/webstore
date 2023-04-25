@@ -3,9 +3,9 @@ class CreateMarketplaces < ActiveRecord::Migration[7.0]
     create_table :marketplaces do |t|
       t.string :image
       t.string :name
-      t.string :price
+      t.decimal :price
       t.string :description
-      t.string :quantity
+      t.integer :quantity
 
       t.timestamps
     end

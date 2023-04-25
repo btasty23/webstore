@@ -19,4 +19,12 @@ Rails.application.routes.draw do
   
   get '/admin', to: "home#admin"
   post '/newproduct', to: "home#newproduct"
+
+  # routes for viewing and buying products (Products Controller)
+  get '/products', to: 'product#index', as: 'storefront'
+  get '/products/:id/buy', to: 'product#add_to_cart', as: 'add_to_cart'
+  get '/products/cart', to: 'product#view_cart', as: 'view_cart'
+  get '/products/checkout', to: 'product#checkout', as: 'checkout'
+  
+
 end

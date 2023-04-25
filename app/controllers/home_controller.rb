@@ -54,24 +54,6 @@ class HomeController < ApplicationController
         newproduct.save
         redirect_to "/admin"
     end
-
-    def admin
-        @marketplace = Marketplace.all
-    end
-    
-
-
-    def add_to_cart
-        
-    end
-
-    def view_cart
-
-    end
-
-    def checkout
-
-    end
-    
+  
 
 end

@@ -23,37 +23,18 @@
         <tr>
             <td> <%= image_tag market[:image] %> </td>
             <td> <%= market[:name] %> </td>
-            <td> <%= market[:price] %> </td>
+            <td> <%= number_to_currency market[:price] %> </td>
             <td> <%= market[:description] %> </td>
             <td> <%= market[:quantity] %> </td>
         </tr>
         <%end%>
-        <tr>
-            <td><img src="assets/images/Soccerball.jpg" width="200" height="200"></td>
-            <td>Soccerball</td>
-            <td>$121</td>
-            <td>The American version of the European football from adidas.</td>
-            <td>420 in stock</td>
-        </tr>
-        <tr>
-            <td><img src="assets/images/Basketball.jpg" width="200" height="200"></td>
-            <td>Basketball</td>
-            <td>$60</td>
-            <td>Wilson basketball the cousin of the volleyball from Castaway teh movie.</td>
-            <td>69 in stock</td>
-        </tr>
-        <tr>
-            <td><img src="assets/images/Golfball.jpg" width="200" height="200"></td>
-            <td>Golfball</td>
-            <td>$3</td>
-            <td>The best ball for breaking windows.</td>
-            <td>911 in stock</td>
-        </tr>
         </tbody>
     </table>
     <p > 
         <a href="/team">Team Site</a> &emsp;&emsp;
         <a href="/blog">Blog Site</a> &emsp;&emsp;
+        <%= link_to "Store Site", storefront_path %> &emsp;&emsp;
+        <%= link_to "View Cart", view_cart_path %> &emsp;&emsp;
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">The Best Site</a>
     </p>
 </body>

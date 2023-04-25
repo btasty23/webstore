@@ -18,20 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_155645) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "cats", force: :cascade do |t|
-    t.string "name"
-    t.decimal "weight"
-    t.string "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "marketplaces", force: :cascade do |t|
     t.string "image"
     t.string "name"
-    t.string "price"
+    t.decimal "price"
     t.string "description"
-    t.string "quantity"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
