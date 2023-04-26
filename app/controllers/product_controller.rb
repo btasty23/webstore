@@ -46,7 +46,7 @@ class ProductController < ApplicationController
 		  p.save
 		end
 	  flash[:notice] = "Your order is on the way!"
-	  redirect_to storefront_url
+	  redirect_to root_path
 	end
   
 	private
